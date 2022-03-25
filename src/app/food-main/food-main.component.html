@@ -1,0 +1,16 @@
+<main class="container-fluid">
+	<section id="salty">
+		<app-divider [dividerTitle]="sSaltyTitle"></app-divider>
+		<div class="row justify-content-center m-0" data-masonry='{"percentPosition": true}'>
+			<app-food-card class="col-xs-12 col-md-4" *ngFor="let item of lstRecipes" [cardRecipe]=item>
+			</app-food-card>
+		</div>
+	</section>
+	<section id="sweet">
+		<app-divider [dividerTitle]="sSweetTitle"></app-divider>
+		<div class="row justify-content-center m-0" data-masonry='{"percentPosition": true}'>
+			<app-food-card class="col-xs-12 col-md-4" *ngFor="let item of lstRecipes" [cardRecipe]=item>
+			</app-food-card>
+		</div>
+	</section>
+</main>
