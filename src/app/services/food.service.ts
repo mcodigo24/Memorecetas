@@ -8,6 +8,8 @@ export class FoodService {
   constructor(private http: HttpClient) {}
 
   getRecipes() {
-    return this.http.get('assets/data/db.json');
+    return this.http.get(
+      'https://memorecetas-default-rtdb.firebaseio.com/recipes_idx.json'
+    );
   }
 }

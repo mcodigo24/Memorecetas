@@ -1,0 +1,19 @@
+<main class="container-fluid min-vh-100">
+
+	<app-loader *ngIf="loading"></app-loader>
+
+	<section id="salty" *ngIf="!loading" class="animate__animated animate__fadeIn">
+		<app-divider [dividerTitle]="sSaltyTitle" [cantRec]="lstSaltyRecipes.length"></app-divider>
+		<div class="row justify-content-center m-0">
+			<app-food-card class="col-xs-12 col-md-4" *ngFor="let item of lstSaltyRecipes" [cardRecipe]=item>
+			</app-food-card>
+		</div>
+	</section>
+	<section id="sweet" *ngIf="!loading" class="animate__animated animate__fadeIn">
+		<app-divider [dividerTitle]="sSweetTitle" [cantRec]="lstSweetRecipes.length"></app-divider>
+		<div class="row justify-content-center m-0">
+			<app-food-card class="col-xs-12 col-md-4" *ngFor="let item of lstSweetRecipes" [cardRecipe]=item>
+			</app-food-card>
+		</div>
+	</section>
+</main>
