@@ -12,7 +12,9 @@
             </h6>
         </div>
         <div class="col-12 col-md-auto">
-            <a class="btn btn-warning" href="" role="button" *ngIf="cardRecipe.has_sbs">Ver Receta</a>
+            <a class="btn btn-warning" href="" role="button" *ngIf="cardRecipe.has_sbs"
+                [routerLink]="['/recipe', cardRecipe.id]">Ver
+                Receta</a>
         </div>
     </div>
 </div>

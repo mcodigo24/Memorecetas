@@ -12,4 +12,17 @@ export class FoodService {
       'https://memorecetas-default-rtdb.firebaseio.com/recipes_idx.json'
     );
   }
+
+  getRecipe(id: string) {
+    return this.http.get(
+      `https://memorecetas-default-rtdb.firebaseio.com/recipes/${id}.json`
+    );
+  }
+
+  getDataRecipeInx(id: string) {
+    let idx = parseInt(id.split('-')[1]) - 1;
+    return this.http.get(
+      `https://memorecetas-default-rtdb.firebaseio.com/recipes_idx/${idx}.json`
+    );
+  }
 }
