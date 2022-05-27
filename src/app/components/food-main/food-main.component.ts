@@ -17,7 +17,7 @@ export class FoodMainComponent implements OnInit {
 
   constructor(public foodService: FoodService) {
     this.sSweetTitle = 'Dulces';
-    this.sSaltyTitle = 'Saldados';
+    this.sSaltyTitle = 'Salados';
     this.lstRecipes = [];
     this.lstSaltyRecipes = [];
     this.lstSweetRecipes = [];
